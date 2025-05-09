@@ -9,8 +9,9 @@ Tekton is a Kubernetes-native framework that focuses on providing a declarative 
 1.	Tasks: The fundamental building blocks of a Tekton pipeline are tasks. Each task represents a specific unit of work, such as building code, running tests, or deploying an application. Tasks can be combined and reused across pipelines, promoting modularity and code sharing.
 2.	Pipelines: Pipelines provide a way to orchestrate tasks in a specific order to create an end-to-end CI/CD workflow. With Tekton, you can define complex pipelines that include multiple stages, parallel execution, and conditional branching.
 3.	Resources: Resources represent the inputs and outputs of tasks within a pipeline. They can include source code repositories, container images, or any other artifacts required for the pipeline execution. Tekton enables you to define and manage resources as Kubernetes CRDs.
-4.	Workspaces: Workspaces allow you to share files between tasks within a pipeline. They provide a mechanism for passing data and artifacts between different stages of the CI/CD workflow. Workspaces ensure isolation and reproducibility, making it easier to manage complex pipe.
- ![image](https://github.com/user-attachments/assets/ff1b8fad-e826-40d9-be35-af780d0ad0be)
+4.	Workspaces: Workspaces allow you to share files between tasks within a pipeline. They provide a mechanism for passing data and artifacts between different stages of the CI/CD workflow. Workspaces ensure isolation and reproducibility, making it easier to manage a complex pipe.
+
+![image](https://github.com/user-attachments/assets/ff1b8fad-e826-40d9-be35-af780d0ad0be)
 
 6. A task can consist of multiple steps, and pipeline may consist of multiple tasks. The tasks may run in parallel or in sequence.
 
@@ -27,7 +28,7 @@ Argo CD is a declarative continuous delivery tool for Kubernetes that enables de
 
 ## Let’s get our hands dirty
 You will need your personal GitHub account with a Personal Access Token, and your personal registry with an encrypted password.
- ![image](https://github.com/user-attachments/assets/a6e11cb7-168c-4ce5-a8e3-9850d7fb7d56)
+![image](https://github.com/user-attachments/assets/a6e11cb7-168c-4ce5-a8e3-9850d7fb7d56)
  
 ### Let's explain the architecture
 1. This is a sample pipeline based on a .Net core application
@@ -170,7 +171,7 @@ git push
 
 ![image](https://github.com/user-attachments/assets/f9301fe8-74eb-42f2-927e-1d3397289f76)
 
-7. You can either wait 3 minutes for ArgoCD to automatically sync with latest changes of your repo, or you can manually click on sync on Argo
+6. You can either wait 3 minutes for ArgoCD to automatically sync with latest changes of your repo, or you can manually click on sync on Argo
 
 ![image](https://github.com/user-attachments/assets/f2d0b2b5-e954-4651-9c48-90df9ef85dbc)
 
