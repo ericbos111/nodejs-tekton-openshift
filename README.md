@@ -41,7 +41,8 @@ You will need your personal GitHub account with a Personal Access Token, and you
 * ArgoCD is called OpenShift GitOps in OpenShift
 * Tekton is called OpenShift Pipelines in OpenShift
 Navigate to OperatorHub in OpenShift and install OpenShift Gitops in OpenShift and OpenShift Pipelines in OpenShift
- ![image](https://github.com/user-attachments/assets/489b7b38-0b85-4452-99f8-b595d92e5318)
+
+![image](https://github.com/user-attachments/assets/489b7b38-0b85-4452-99f8-b595d92e5318)
  
 ### Step 2: Create your account in quay.io
 Create your account in quay.io and create a repository named dotnetcore. You can also use another registry if you have.
@@ -102,11 +103,12 @@ oc get route
  
 in my case it is “el-dotnetcore-api-dotnetcore.apps.cluster-l8wqt.l8wqt.sandbox952.opentlc.com”. Copy this route and navigate to your github pipeline repo, navigate to settings, then webhook
 9. Create the webhook by clicking on **add webhook**
- ![image](https://github.com/user-attachments/assets/ae3fcbbf-621d-4925-8fc1-a3780dc0b5e5)
+![image](https://github.com/user-attachments/assets/ae3fcbbf-621d-4925-8fc1-a3780dc0b5e5)
   
 Don't worry if the webhook doesn't work, you can still continue with the exercise. Your cluster might not be publicly accessible.
 To check the pipeline, navigate to pipeline and go to your respective project, to see your pipeline. If you get an error message about the Dockerfile, make sure your pipeline uses a PVC as the shared workspace.
- ![image](https://github.com/user-attachments/assets/2af7e97a-d16c-4f69-843e-e3b0093c1eb7)
+
+![image](https://github.com/user-attachments/assets/2af7e97a-d16c-4f69-843e-e3b0093c1eb7)
  
 ### Step 4: Set up ArgoCD
 1. Apply permission to ArgoCD
@@ -156,17 +158,21 @@ Once you login, you can see your application deployed by ArgoCD
 git commit -am "new changes"
 git push 
 ```
- ![image](https://github.com/user-attachments/assets/45d6da41-235a-4e01-bd18-7959d5c807d0)
+
+![image](https://github.com/user-attachments/assets/45d6da41-235a-4e01-bd18-7959d5c807d0)
  
 2. The webhook will start the CI using Tekton
- ![image](https://github.com/user-attachments/assets/38a2ef52-1afe-49cc-b33d-070a3434616b)
+
+![image](https://github.com/user-attachments/assets/38a2ef52-1afe-49cc-b33d-070a3434616b)
 
 4. Wait for some time for CI to finish
 5. Navigate to your other Github repo, and you will notice that Tekton has pushed the latest changes to your GitOps repo.
- ![image](https://github.com/user-attachments/assets/f9301fe8-74eb-42f2-927e-1d3397289f76)
+
+![image](https://github.com/user-attachments/assets/f9301fe8-74eb-42f2-927e-1d3397289f76)
 
 7. You can either wait 3 minutes for ArgoCD to automatically sync with latest changes of your repo, or you can manually click on sync on Argo
- ![image](https://github.com/user-attachments/assets/f2d0b2b5-e954-4651-9c48-90df9ef85dbc)
+
+![image](https://github.com/user-attachments/assets/f2d0b2b5-e954-4651-9c48-90df9ef85dbc)
 
 #### Congratulations, your end to end GitOps using Tekton and ArgoCD is ready 
 
